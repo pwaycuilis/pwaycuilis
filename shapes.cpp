@@ -1,3 +1,10 @@
+//Paul Waycuilis
+//Computer Graphics - Fall 2020
+// 9-22-2020
+// Draws shapes according to user input
+// (keyboard input)=shape: (t)=triangle (h)=hexagon
+// (c)=circle (p)=point (r)=line (s)=square (u)=cube (q)=quit
+
 #include <math.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
@@ -24,9 +31,7 @@ const int screenWidth = 600 ; //window width is 600
 void myDisplay(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);     // clear the screen 
-//  	glBegin(GL_POINTS);
-//	glBegin(GL_LINE_STRIP) ;
-//	glBegin(GL_LINE_LOOP) ;
+
 	glBegin(GL_POLYGON);
 	glVertex2i(289, 190);        // Dubhe 
 	glVertex2i(320,  128) ;        // Merak
@@ -89,43 +94,19 @@ void drawCube(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-/*
-	glTranslatef(1.5, 0.0f, -7.0f);
-	glBegin(GL_QUADS);
-		glColor3f(0.0f, 1.0f, -1.0f);
-		glVertex3f( 1.0f, 1.0f, -1.0f);
-      		glVertex3f(-1.0f, 1.0f, -1.0f);
-      		glVertex3f(-1.0f, 1.0f,  1.0f);
-      		glVertex3f( 1.0f, 1.0f,  1.0f);
-*/
-		
-	//added	
+
 	
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	//glEnable(GL_DEPTH_TEST);
-
 	//rotate to see more faces of cube
 	glRotatef(20.0f, 0.5f, 0.25f, -0.75f);
-
-	//
-	//glEnable(GL_DEPTH_TEST);
-	//
 
 
 	//create 6 different colored squares to form cube
 	glBegin(GL_QUADS);	
 		glEnable(GL_DEPTH_TEST);
-		//top square
-/*
-		glColor3f(0.0f, 1.0f, -1.0f);//Green
-		
-		glVertex3f( 1.0f, 1.0f, -1.0f);
-      		glVertex3f(-1.0f, 1.0f, -1.0f);
-      		glVertex3f(-1.0f, 1.0f,  1.0f);
-      		glVertex3f( 1.0f, 1.0f,  1.0f);
-*/
+
 
 		//CUBE*************
 		//top square
